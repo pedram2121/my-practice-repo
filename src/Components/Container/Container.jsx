@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from './container.module.css'
+import styled from "../Container/container.module.css";
 
 
 function Container({children}) {

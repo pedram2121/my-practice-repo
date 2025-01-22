@@ -1,6 +1,6 @@
-/* .container{
-  padding: 0 60px;
-  max-width: 1350px;
-  width: 100%;
-  margin: 0 auto;  
-} */
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('../src/assets/Fonts/Roboto-Black.ttf') format('woff2'),
+       url('../src/assets/Fonts/Roboto-Light.ttf') format('woff');
+  font-style: normal; /* یا italic */
+}

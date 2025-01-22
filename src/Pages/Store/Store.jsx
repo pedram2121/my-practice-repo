@@ -1,6 +1,5 @@
 import React from "react";
-import style from "./News.module.css";
-import Container from "../Component/Container";
+import Container from "../../Components/Container/Container";
 function News() {
   return (
     <Container>
