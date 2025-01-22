@@ -1,0 +1,63 @@
+.HeaderTwoo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  font-size: 40px;
+  gap: 20px;
+  position: relative;
+}
+
+.inputDiv {
+  display: flex;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.inputBox {
+  padding: 0.9rem 1rem;
+  width: 90%;
+  height: 100%;
+}
+
+.search {
+  position: absolute;
+  margin-right: 200px;
+  margin-top: 1.5px;
+  color: black;
+  top: 0.75rem;
+  right: 0.75rem;
+  color: #9ca3af;
+  font-size: 1.4rem;
+}
+
+.logo:hover {
+  cursor: pointer;
+  color: rgb(90, 90, 90);
+}
+
+.container {
+  display: flex;
+  font-size: 30px;
+  gap: 7px;
+}
+
+.iconwrapper {
+  position: relative;
+}
+
+.badge {
+  background-color: #dc2626;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  transform: translate(25%, -25%);
+}

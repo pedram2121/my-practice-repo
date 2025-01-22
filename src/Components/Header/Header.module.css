@@ -1,0 +1,49 @@
+
+.HeaderTop{
+    border-bottom: 1px solid gray;
+    padding-top: 20px;
+   padding-bottom: 15px;
+    
+}
+.HeaderTopFlex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    font-size: 24px; 
+}
+.heder_top__icon_wrapper{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px 5px;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.Gap{
+    margin-right: 10px;
+    background-color: rgb(185, 185, 185);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px 5px;
+    border-radius: 10px;
+}
+
+.Gap :hover{
+color: rgb(203, 236, 12) ;
+}
+
+.text{
+    color: rgb(37, 37, 37);
+    font-size: 14px;
+}
+
+.SelectGap{
+    display: flex;
+    gap: 5px;
+}

@@ -1,14 +1,18 @@
 .navbarHeder {
-  background-color: darkslategray;
-  margin-top: 40px;
+  width: 100%;
+  margin-left: -24px;
+  background-color: black;
+  margin-top: 45px;
   display: flex;
   font-style: normal;
   height: 70px;
   align-items: center;
+  justify-items: center;
   justify-content: space-between;
   flex-direction: row-reverse;
   padding: 0 50px;
-  border-radius: 10px;
+  border-radius: 13px;
+  box-sizing: border-box;
 }
 .ul {
   color: white;
@@ -36,19 +40,19 @@
     list-style: none;
   font-family:Roboto Condensed;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .sportLink:hover{
-   color:cyan ;
+   color:rgb(203, 236, 12) ;
 }
 
 .ul a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .ul a:hover {
-  color:cyan ;
+  color:rgb(203, 236, 12) ;
 }

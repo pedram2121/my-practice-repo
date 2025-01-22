@@ -10,11 +10,18 @@ function Navbar() {
     <Container>
       <div className={style.navbarHeder}>
         <ul className={style.ul}>
+
           <li>
-            <Link to="/About">Contact us</Link>
+            <Link to="/men">MEN'S</Link>
           </li>
           <li>
-            <Link to="/News">Store</Link>
+            <Link to="/women">WOMEN'S</Link>
+          </li>
+          <li>
+            <Link to="/contact">ContactUs</Link>
+          </li>
+          <li>
+            <Link to="/store">Store</Link>
           </li>
           <li>
             <Link to="/">Home</Link>

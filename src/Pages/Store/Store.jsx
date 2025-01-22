@@ -1,11 +1,12 @@
 import React from "react";
 import Container from "../../Components/Container/Container";
-function News() {
+
+function Store() {
   return (
     <Container>
-      <div>News</div>
+      <div>Store</div>
     </Container>
   );
 }
 
-export default News;
+export default Store;

@@ -1,0 +1,114 @@
+.slideContainer {
+  position: relative;
+  border: none;
+  outline: none;
+}
+
+.slideContent {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 250px;
+  background: rgba(255, 255, 255, 0.64);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+ @media (min-width: 768px) {
+  .slideContent {
+    left: 70px;
+    max-width: 350px;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+  }
+} 
+
+.slideTitle {
+  color: var(--accent-color, #ff5722);
+  font-size: 24px;
+}
+
+ @media (min-width: 1024px) {
+  .slideTitle {
+    font-size: 28px;
+  }
+} 
+
+.slideMaintitle {
+  color: black;
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+ @media (min-width: 768px) {
+  .slideMaintitle {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .slideMaintitle {
+    font-size: 44px;
+  }
+} 
+
+.slidePrice {
+  font-size: 24px;
+  color: gray;
+}
+
+.priceBold {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+ @media (min-width: 768px) {
+  .priceBold {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .priceBold {
+    font-size: 30px;
+  }
+} 
+
+.slideButton {
+  background: var(--accent-color, #ff5722);
+  color: white;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.slideButton:hover {
+  background: black;
+}
+
+@media (min-width: 768px) {
+  .slideButton {
+    font-size: 16px;
+  }
+} 
+
+.slideImage {
+  width: 100%;
+  height: 500px;
+  border-radius: 16px;
+  object-fit: cover;
+  object-position: right;
+}
+
+ @media (min-width: 768px) {
+  .slideImage {
+    height: auto;
+    object-position: left bottom;
+  }
+} 
