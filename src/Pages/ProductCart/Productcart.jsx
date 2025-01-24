@@ -2,7 +2,6 @@ import React from "react";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import styles from "./Productcart.module.css";
 
-
 const generatingRate = (rating) => {
   switch (rating) {
     case 1:
@@ -61,30 +60,23 @@ const generatingRate = (rating) => {
 };
 
 const Productcart = ({ img, name, category, price, rating, sale }) => {
-
   return (
-
-
-
-   <div className={styles.productCard}>
+    <div className={styles.productCard}>
       <div>
-        <img
-          className={styles.productImage} src={img}  alt={name}/>
+        <img className={styles.productImage} src={img} alt={name} />
       </div>
       <div className={styles.info}>
         <h2 className={styles.title}>{name}</h2>
-        <p className={styles.categories}>
+        {/* <p className={styles.categories}>
           {Array.isArray(category) ? category.join(", ") : "No category"}
-        </p>
-        <p className={styles.price}>${price}.00</p>
+        </p> */}
         {generatingRate(rating)}
-        {sale && <span className={styles.sale}>Sale</span>}
+        <del className={styles.dell}>${parseInt(price) + 50}.00</del>
+        <p className={styles.price}>${price}.00</p>
+
+        {sale && <span className={styles.sale}>Buy Now</span>}
       </div>
     </div>
-
-
-   
-
   );
 };
 

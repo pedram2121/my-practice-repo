@@ -6,7 +6,7 @@
       "img": "/public/product__13.jpg",
       "name": "Wild Silk Finish Lipstick",
       "price": 23.00,
-      "category": ["lipsticks"],
+      "rating": 4,
       "sale": true
     },
     {
@@ -14,23 +14,23 @@
       "img": "/public/product__6.jpg",
       "name": "Wild Silk Finish Lipstick",
       "price": 15.00,
-      "category": ["lipsticks"],
-      "sale": false
+      "rating": 2,
+      "sale": true
     },
     {
       "id": 2,
       "img": "/public/cta-banner.jpg",
       "name": "Wild Silk Finish Lipstick",
       "price": 83.00,
-      "category": ["lipsticks"],
-      "sale": false
+      "rating": 3,
+      "sale": true
     },
     {
       "id": 3,
       "img": "/public/product__16.jpg",
       "name": "Wild Silk Finish Lipstick",
       "price": 4.00,
-      "category": ["skincare", "makeup"],
+      "rating": 1,
       "sale": true
     },
     {
@@ -38,32 +38,32 @@
       "img": "/public/product__29.jpg",
       "name": "Wild Silk Finish Lipstick",
       "price": 24.00,
-      "category": ["skincare"],
-      "sale": false
+      "rating": 4,
+      "sale": true
     },
     {
       "id": 5,
       "img": "/public/product__22.jpg",
       "name": "Wild Silk Finish Lipstick",
       "price": 32.00,
-      "category": ["lipsticks"],
-      "sale": false
+      "rating": 3,
+      "sale": true
     },
     {
       "id": 6,
       "img": "/public/product__21.jpg",
       "name": "Wild Silk Finish Lipstick",
       "price": 48.00,
-      "category": ["makeup"],
-      "sale": false
+      "rating": 2,
+      "sale": true
     },
     {
       "id": 7,
       "img": "/public/product__20.jpg",
       "name": "Wild Silk Finish Lipstick",
       "price": 59.00,
-      "category": ["nail & wax"],
-      "sale": false
+      "rating": 3,
+      "sale": true
     }
   ]
 }

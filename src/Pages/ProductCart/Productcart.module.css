@@ -4,11 +4,12 @@
 
 /* استایل کلی کارت محصول */
 .productCard {
-  padding: 15px;
+
+  padding: 25px;
   border: 1px solid #e5e7eb; /* خاکستری روشن */
   border-radius: 12px;
   max-width: 300px;
-  height: 450px;
+  height: 460px;
   background-color: #ffffff;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
@@ -23,7 +24,7 @@
   width: 100%;
   height: auto;
   max-width: 200px; /* محدودیت برای سایز تصویر */
-  max-height: 300px; /* محدودیت ارتفاع */
+  max-height: 250px; /* محدودیت ارتفاع */
   object-fit: cover; /* تناسب ابعاد تصویر */
   margin: 0 auto;
   border-radius: 8px;
@@ -67,11 +68,15 @@
 .sale {
   font-size: 14px;
   color: #ffffff;
-  background-color: #ef4444; /* قرمز */
-  padding: 6px 8px;
+  background-color: #1e81f3; /* قرمز */
+  padding: 6px 6px;
   border-radius: 6px;
   display: inline-block;
-  margin-top: 8px;
+  margin-top: 20px;
+}
+
+.dell{
+  margin-top: 20px;
 }
 
 /* بخش رتبه‌بندی */
@@ -81,6 +86,7 @@
   gap: 4px;
   font-size: 20px;
   color: #ff9529; /* نارنجی */
+   margin-top: 20px;
 }
 
 /* استایل برای ستاره‌ها */
