@@ -1,12 +1,6 @@
-/* Productcart.module.css */
-
-
-
-/* استایل کلی کارت محصول */
 .productCard {
-
   padding: 25px;
-  border: 1px solid #e5e7eb; /* خاکستری روشن */
+  border: 1px solid #e5e7eb;
   border-radius: 12px;
   max-width: 300px;
   height: 460px;
@@ -19,18 +13,16 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* استایل تصویر محصول */
 .productImage {
   width: 100%;
   height: auto;
-  max-width: 200px; /* محدودیت برای سایز تصویر */
-  max-height: 250px; /* محدودیت ارتفاع */
-  object-fit: cover; /* تناسب ابعاد تصویر */
+  max-width: 200px;
+  max-height: 250px;
+  object-fit: cover;
   margin: 0 auto;
   border-radius: 8px;
 }
 
-/* بخش اطلاعات محصول */
 .info {
   padding-top: 18px;
   display: flex;
@@ -39,64 +31,153 @@
   text-align: center;
 }
 
-/* عنوان محصول */
 .title {
   font-size: 16px;
   font-weight: 500;
-  color: #1f252e; /* خاکستری تیره */
+  color: #1f252e;
   text-transform: uppercase;
   margin-bottom: 8px;
 }
 
-/* دسته‌بندی محصول */
 .categories {
   font-size: 15px;
-  color: #6b7280; /* خاکستری روشن */
+  color: #6b7280;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
-/* قیمت محصول */
 .price {
   font-size: 22px;
   font-weight: bold;
-  color: #0b8f63; /* سبز */
+  color: #0b8f63;
 }
 
-/* استایل برای برچسب فروش */
 .sale {
   font-size: 14px;
   color: #ffffff;
-  background-color: rgb(162, 187, 19) ;
+  background-color: rgb(162, 187, 19);
   padding: 6px 6px;
   border-radius: 6px;
   display: inline-block;
   margin-top: 20px;
   cursor: pointer;
-  
 }
 
-.dell{
+.dell {
   margin-top: 20px;
   color: #8c8f94;
 }
 
-/* بخش رتبه‌بندی */
 .rating {
   display: flex;
   justify-content: center;
   gap: 4px;
   font-size: 20px;
-  color: #ff9529; /* نارنجی */
-   margin-top: 20px;
+  color: #ff9529;
+  margin-top: 20px;
 }
 
-/* استایل برای ستاره‌ها */
 .star {
   transition: color 0.2s ease-in-out;
 }
 
 .star:hover {
-  color: #f97316; /* نارنجی پررنگ‌تر */
+  color: #f97316;
+}
+
+@media (max-width: 1024px) {
+  .productCard {
+    height: auto;
+    max-width: 250px;
+  }
+
+  .productImage {
+    max-width: 180px;
+    max-height: 220px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+
+  .categories {
+    font-size: 13px;
+  }
+
+  .price {
+    font-size: 20px;
+  }
+
+  .sale {
+    font-size: 12px;
+  }
+
+  .rating {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .productCard {
+    height: auto;
+    max-width: 200px;
+  }
+
+  .productImage {
+    max-width: 150px;
+    max-height: 200px;
+  }
+
+  .title {
+    font-size: 12px;
+  }
+
+  .categories {
+    font-size: 12px;
+  }
+
+  .price {
+    font-size: 18px;
+  }
+
+  .sale {
+    font-size: 10px;
+  }
+
+  .rating {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .productCard {
+    height: auto;
+    max-width: 180px;
+  }
+
+  .productImage {
+    max-width: 130px;
+    max-height: 180px;
+  }
+
+  .title {
+    font-size: 10px;
+  }
+
+  .categories {
+    font-size: 10px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  .sale {
+    font-size: 8px;
+  }
+
+  .rating {
+    font-size: 14px;
+  }
 }

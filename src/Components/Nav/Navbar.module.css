@@ -14,6 +14,7 @@
   border-radius: 13px;
   box-sizing: border-box;
 }
+
 .ul {
   color: white;
   display: flex;
@@ -24,7 +25,7 @@
   text-align: center;
   gap: 50px;
   list-style: none;
-  font-family:Roboto Condensed;
+  font-family: Roboto Condensed;
   cursor: pointer;
 }
 
@@ -37,14 +38,14 @@
   font-weight: bold;
   color: white;
   text-decoration: none;
-    list-style: none;
-  font-family:Roboto Condensed;
+  list-style: none;
+  font-family: Roboto Condensed;
   cursor: pointer;
   font-size: 16px;
 }
 
-.sportLink:hover{
-   color:rgb(203, 236, 12) ;
+.sportLink:hover {
+  color: rgb(203, 236, 12);
 }
 
 .ul a {
@@ -54,5 +55,54 @@
 }
 
 .ul a:hover {
-  color:rgb(203, 236, 12) ;
+  color: rgb(203, 236, 12);
+}
+
+@media (max-width: 1024px) {
+  .navbarHeder {
+    flex-direction: column;
+    padding: 0 30px;
+    height: auto;
+  }
+
+  .ul {
+    gap: 30px;
+    font-size: 14px;
+  }
+
+  .sportLink {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbarHeder {
+    padding: 0 20px;
+  }
+
+  .ul {
+    gap: 20px;
+    font-size: 12px;
+  }
+
+  .sportLink {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbarHeder {
+    padding: 0 10px;
+    height: auto;
+  }
+
+  .ul {
+    gap: 15px;
+    font-size: 10px;
+    flex-direction: column;
+  }
+
+  .sportLink {
+    font-size: 10px;
+  }
 }

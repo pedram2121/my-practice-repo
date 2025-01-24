@@ -7,4 +7,29 @@
 .footerContent {
   text-align: center; /* معادل text-center */
   color: white; /* معادل text-white */
+  font-size: 1rem; /* اندازه متن پیش‌فرض */
+}
+
+/* حالت ریسپانسیو برای تبلت (عرض 768px به پایین) */
+@media (max-width: 768px) {
+  .footerContainer {
+    padding: 1.5rem 0; /* کاهش فضای padding */
+    margin-top: 6rem; /* کاهش فاصله بالا */
+  }
+
+  .footerContent {
+    font-size: 0.9rem; /* کوچک‌تر کردن متن */
+  }
+}
+
+/* حالت ریسپانسیو برای موبایل (عرض 480px به پایین) */
+@media (max-width: 480px) {
+  .footerContainer {
+    padding: 1rem 0; /* کاهش بیشتر فضای padding */
+    margin-top: 4rem; /* کاهش بیشتر فاصله بالا */
+  }
+
+  .footerContent {
+    font-size: 0.8rem; /* متن کوچک‌تر برای موبایل */
+  }
 }

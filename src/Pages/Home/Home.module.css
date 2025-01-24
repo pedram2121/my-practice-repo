@@ -1,13 +1,34 @@
-.HomeDivv{
-   display: flex;
+.HomeDivv {
+  display: flex;
   flex-direction: column;
 }
 
-.hhh{
+.hhh {
   margin-top: 100px;
-    text-align: center;
-}
-.hhh:hover{
-  color: rgb(176, 199, 46) ;
+  text-align: center;
 }
 
+.hhh:hover {
+  color: rgb(176, 199, 46);
+}
+
+@media (max-width: 1024px) {
+  .hhh {
+    margin-top: 80px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hhh {
+    margin-top: 60px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hhh {
+    margin-top: 40px;
+    font-size: 18px;
+  }
+}

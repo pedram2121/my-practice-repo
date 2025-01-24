@@ -1,49 +1,96 @@
+.HeaderTop {
+  border-bottom: 1px solid gray;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
 
-.HeaderTop{
-    border-bottom: 1px solid gray;
-    padding-top: 20px;
-   padding-bottom: 15px;
-    
+.HeaderTopFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px; /* اندازه متن پیش‌فرض */
 }
-.HeaderTopFlex{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-    font-size: 24px; 
+
+.heder_top__icon_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+  gap: 10px;
 }
-.heder_top__icon_wrapper{
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 5px 5px;
-    border-radius: 10px;
+
+.Gap {
+  margin-right: 10px;
+  background-color: rgb(185, 185, 185);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.Gap:hover {
+  color: rgb(203, 236, 12);
+}
+
+.text {
+  color: rgb(37, 37, 37);
+  font-size: 14px; 
+}
+
+.SelectGap {
+  display: flex;
+  gap: 5px;
+}
+
+
+@media (max-width: 768px) {
+  .HeaderTop {
+    padding-top: 15px; 
+    padding-bottom: 10px; 
+  }
+
+  .HeaderTopFlex {
+    font-size: 20px; 
+    flex-direction: column;
     gap: 10px;
+  }
+
+  .heder_top__icon_wrapper {
+    gap: 8px; 
+    padding: 4px; 
+  }
+
+  .text {
+    font-size: 12px; 
+  }
 }
 
-.Gap{
-    margin-right: 10px;
-    background-color: rgb(185, 185, 185);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 5px 5px;
-    border-radius: 10px;
-}
 
-.Gap :hover{
-color: rgb(203, 236, 12) ;
-}
+@media (max-width: 480px) {
+  .HeaderTop {
+    padding-top: 10px;
+    padding-bottom: 8px;
+  }
 
-.text{
-    color: rgb(37, 37, 37);
-    font-size: 14px;
-}
+  .HeaderTopFlex {
+    font-size: 18px;
+  }
 
-.SelectGap{
-    display: flex;
-    gap: 5px;
+  .heder_top__icon_wrapper {
+    gap: 6px;
+    padding: 3px;
+  }
+
+  .text {
+    font-size: 10px;
+  }
+
+  .Gap {
+    margin-right: 5px;
+    padding: 4px;
+  }
 }
