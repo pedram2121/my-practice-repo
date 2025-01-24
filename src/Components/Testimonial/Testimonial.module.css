@@ -1,0 +1,101 @@
+.container {
+  margin-top: 400px;
+  max-width: 1350px; /* همان max-width کانتینر اصلی */
+}
+.title {
+  font-weight: 500;
+  font-size: 2xl;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* ستون اول بزرگ‌تر از ستون دوم */
+  gap: 1rem;
+}
+.card {
+  border: 1px solid #d1d5db; /* border-gray-300 */
+  border-radius: 1rem;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  max-width: 300px; /* عرض حداکثر */
+}
+.avatar {
+  border-radius: 50%;
+}
+
+.inlineBlock {
+  display: inline-block;
+}
+.name {
+  color: #585e69; /* text-gray-500 */
+  font-weight: 700; /* font-black */
+  font-size: 20px;
+  margin-top: -35px;
+}
+.role {
+  color: #6b7280; /* text-gray-500 */
+  margin-top: -55px;
+}
+.quoteIcon {
+  display: inline-block;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 25px;
+}
+.description {
+  max-width: 300px;
+  color: #6b7280; /* text-gray-500 */
+}
+
+
+
+.bannerContainer {
+  background-color: #c4c4c4; /* معادل bg-red-600 */
+  background-image: url('../../../public/cta-bannerr.jpg.jpg'); /* معادل bg-[url()] */
+  background-size: cover; /* معادل bg-cover */
+  height: 700px; /* معادل h-[500px] */
+  width: 950px;
+  border-radius: 16px; /* معادل rounded-2xl */
+  display: grid;
+  place-items: center;
+}
+
+.cardLarge {
+  background-color: rgba(255, 255, 255, 0.8); /* معادل bg-[#ffffffab] */
+  min-width: 400px; /* معادل min-w-[270px] */
+  border-radius: 12px; /* معادل rounded-xl */
+  padding: 16px 32px; /* معادل py-8 sm:px-8 px-2 */
+  display: grid;
+  grid-template-rows: auto;
+  place-items: center;
+  gap: 12px; /* معادل gap-3 */
+}
+
+.discountButton {
+  background-color: black; /* معادل bg-blackish */
+  color: white; /* معادل text-white */
+  padding: 14px 32px; /* معادل p-2 */
+  font-size: large;
+  border-radius: 10px; /* معادل rounded-md */
+  margin-top: 40px;
+  cursor: pointer;
+}
+.discountButton:hover{
+  background-color: #616161;
+}
+
+.collectionTitle {
+  font-weight: 800; /* معادل font-extrabold */
+  font-size: 32px; /* معادل text-2xl */
+  color: #272727; /* معادل text-[#272727] */
+}
+
+.priceText {
+  margin-top: -5px;
+  color: #6b7280; /* معادل text-gray-500 */
+  font-size: 20px; /* معادل text-[20px] */
+}
+.priceText :hover{
+  color: rgb(68, 183, 185);
+  cursor: pointer;
+}

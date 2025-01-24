@@ -1,0 +1,10 @@
+.footerContainer {
+  background-color: #212121; /* معادل bg-[#212121] */
+  padding: 2rem 0; /* معادل py-8 */
+  margin-top: 8rem; /* معادل mt-32 */
+}
+
+.footerContent {
+  text-align: center; /* معادل text-center */
+  color: white; /* معادل text-white */
+}

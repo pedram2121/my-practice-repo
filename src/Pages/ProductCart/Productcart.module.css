@@ -68,15 +68,18 @@
 .sale {
   font-size: 14px;
   color: #ffffff;
-  background-color: #1e81f3; /* قرمز */
+  background-color: rgb(162, 187, 19) ;
   padding: 6px 6px;
   border-radius: 6px;
   display: inline-block;
   margin-top: 20px;
+  cursor: pointer;
+  
 }
 
 .dell{
   margin-top: 20px;
+  color: #8c8f94;
 }
 
 /* بخش رتبه‌بندی */

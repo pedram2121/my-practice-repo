@@ -9,6 +9,7 @@ import one from '../../../public/banner-1.jpg'
 import two from "../../../public/banner-2.jpg";
 import three from "../../../public/banner-3.jpg";
 import Product from "../NewProduct/Product";
+import Testimonial from "../../Components/Testimonial/Testimonial";
 
 
 function Home() {
@@ -68,6 +69,7 @@ function Home() {
           <Product/>
         </div>
       </div>
+      <Testimonial/>
     </Container>
   );
 }

@@ -20,7 +20,7 @@ function Header() {
         </div>
 
         <div className={style.text}>
-          <b> FREE SHOPING </b> THIS WEEK ORDER OVER - 55$
+          <b> FREE SHOPING </b> THIS WEEK ORDER OVER - 50$
         </div>
 
         <div className={style.SelectGap}>
