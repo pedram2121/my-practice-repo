@@ -1,0 +1,93 @@
+/* Productcart.module.css */
+
+
+
+/* استایل کلی کارت محصول */
+.productCard {
+  padding: 15px;
+  border: 1px solid #e5e7eb; /* خاکستری روشن */
+  border-radius: 12px;
+  max-width: 300px;
+  height: 450px;
+  background-color: #ffffff;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.productCard:hover {
+  transform: scale(1.04);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* استایل تصویر محصول */
+.productImage {
+  width: 100%;
+  height: auto;
+  max-width: 200px; /* محدودیت برای سایز تصویر */
+  max-height: 300px; /* محدودیت ارتفاع */
+  object-fit: cover; /* تناسب ابعاد تصویر */
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+/* بخش اطلاعات محصول */
+.info {
+  padding-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  text-align: center;
+}
+
+/* عنوان محصول */
+.title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f252e; /* خاکستری تیره */
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* دسته‌بندی محصول */
+.categories {
+  font-size: 15px;
+  color: #6b7280; /* خاکستری روشن */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* قیمت محصول */
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0b8f63; /* سبز */
+}
+
+/* استایل برای برچسب فروش */
+.sale {
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #ef4444; /* قرمز */
+  padding: 6px 8px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+/* بخش رتبه‌بندی */
+.rating {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  font-size: 20px;
+  color: #ff9529; /* نارنجی */
+}
+
+/* استایل برای ستاره‌ها */
+.star {
+  transition: color 0.2s ease-in-out;
+}
+
+.star:hover {
+  color: #f97316; /* نارنجی پررنگ‌تر */
+}

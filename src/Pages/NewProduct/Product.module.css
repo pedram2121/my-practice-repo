@@ -1,0 +1,96 @@
+
+
+.GGG{
+ margin-top: 100px;
+}
+
+.MMM{
+  margin-top: 350px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* پیش‌فرض: 1 ستون */
+  justify-content: center; /* افقی: در مرکز */
+  align-content: center; /* عمودی: در مرکز */
+  place-items: center; /* تمام آیتم‌ها در مرکز */
+  gap: 10px;
+  height: 40vh; /* ارتفاع برای وسط‌چین کردن */
+}
+
+@media (min-width: 640px) { /* معادل sm */
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr); /* 2 ستون */
+  }
+}
+
+@media (min-width: 1024px) { /* معادل lg */
+  .gridContainer {
+    grid-template-columns: repeat(3, 1fr); /* 3 ستون */
+  }
+}
+
+@media (min-width: 1280px) { /* معادل xl */
+  .gridContainer {
+    grid-template-columns: repeat(4, 1fr); /* 4 ستون */
+  }
+}
+
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.productImage {
+  width: 150px; /* عرض تصویر */
+  height: 150px; /* ارتفاع تصویر */
+  object-fit: cover; /* تناسب تصویر */
+  border-radius: 8px;
+}
+
+.productName {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.productPrice {
+  font-size: 14px;
+  color: #555;
+  margin: 8px 0;
+}
+
+.categories {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.category {
+  background-color: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #333;
+}
+
+.sale {
+  color: red;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+

@@ -4,9 +4,11 @@ import Slide from "../../Components/Slide/Slide";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import style from './Home.module.css'
 import one from '../../../public/banner-1.jpg'
 import two from "../../../public/banner-2.jpg";
 import three from "../../../public/banner-3.jpg";
+import Product from "../NewProduct/Product";
 
 
 function Home() {
@@ -17,7 +19,7 @@ function Home() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    pauseOnHover: false,
+    pauseOnHover: true,
   };
 
   const slideData = [
@@ -58,6 +60,13 @@ function Home() {
             />
           ))}
         </Slider>
+      </div>
+
+      <div className={style.HomeDivv}>
+        <div>
+          <h1 className={style.hhh}>NEW PRODUCT</h1>
+          <Product/>
+        </div>
       </div>
     </Container>
   );
