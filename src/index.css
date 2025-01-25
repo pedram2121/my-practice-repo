@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('../src/assets/Fonts/Roboto-Black.ttf') format('woff2'),
+       url('../src/assets/Fonts/Roboto-Light.ttf') format('woff');
+  font-style: normal;
+}

@@ -1,0 +1,101 @@
+
+{
+  "products": [
+    {
+      "id": 0,
+      "img": "/public/product__13.jpg",
+      "name": "Wild Silk Finish Lipstick",
+      "price": 23.0,
+      "rating": 4,
+      "sale": true
+    },
+    {
+      "id": 1,
+      "img": "/public/product__6.jpg",
+      "name": "Wild Silk Finish Lipstick",
+      "price": 15.0,
+      "rating": 2,
+      "sale": true
+    },
+    {
+      "id": 2,
+      "img": "/public/cta-banner.jpg",
+      "name": "Wild Silk Finish Lipstick",
+      "price": 83.0,
+      "rating": 3,
+      "sale": true
+    },
+    {
+      "id": 3,
+      "img": "/public/product__16.jpg",
+      "name": "Wild Silk Finish Lipstick",
+      "price": 4.0,
+      "rating": 1,
+      "sale": true
+    },
+    {
+      "id": 4,
+      "img": "/public/product__29.jpg",
+      "name": "Wild Silk Finish Lipstick",
+      "price": 24.0,
+      "rating": 4,
+      "sale": true
+    },
+    {
+      "id": 5,
+      "img": "/public/product__22.jpg",
+      "name": "Wild Silk Finish Lipstick",
+      "price": 32.0,
+      "rating": 3,
+      "sale": true
+    },
+    {
+      "id": 6,
+      "img": "/public/product__21.jpg",
+      "name": "Wild Silk Finish Lipstick",
+      "price": 48.0,
+      "rating": 2,
+      "sale": true
+    },
+    {
+      "id": 7,
+      "img": "/public/category__3.jpg",
+      "name": "Wild Silk Finish Lipstick",
+      "price": 59.0,
+      "rating": 3,
+      "sale": true
+    },
+    {
+      "id": 8,
+      "img": "/public/product__20.jpg",
+      "name": "Wild Silk Finish Lipstick",
+      "price": 27.0,
+      "rating": 4,
+      "sale": true
+    },
+    {
+      "id": 9,
+      "img": "/public/product__210.jpg",
+      "name": "Wild Silk Finish Lipstick",
+      "price": 13.0,
+      "rating": 3,
+      "sale": true
+    },
+    {
+      "id": 10,
+      "img": "/public/product__211.jpg",
+      "name": "Wild Silk Finish Lipstick",
+      "price": 94.0,
+      "rating": 5,
+      "sale": true
+    },
+    {
+      "id": 11,
+      "img": "/public/product__112.jpg",
+      "name": "Wild Silk Finish Lipstick",
+      "price": 71.0,
+      "rating": 2,
+      "sale": true
+    }
+  ]
+}

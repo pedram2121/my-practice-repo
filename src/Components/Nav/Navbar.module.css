@@ -1,0 +1,131 @@
+.navbarHeder {
+  width: 100%;
+  margin-left: -25px;
+  background-color: black;
+  margin-top: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  padding: 0 50px;
+  border-radius: 13px;
+  box-sizing: border-box;
+}
+
+.ul {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  list-style: none;
+  font-family: Roboto Condensed, sans-serif;
+  cursor: pointer;
+}
+
+.ul a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.ul a:hover {
+  color: rgb(203, 236, 12);
+}
+
+.sportLinkWrapper {
+  margin-right: auto;
+  list-style: none;
+}
+
+.sportLink {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-family: Roboto Condensed, sans-serif;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.sportLink:hover {
+  color: rgb(203, 236, 12);
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .navbarHeder {
+    padding: 0 30px;
+    height: auto;
+  }
+
+  .ul {
+    gap: 30px;
+    font-size: 14px;
+  }
+
+  .sportLink {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbarHeder {
+    padding: 0 20px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: calc(100% - 40px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .ul.showMenu {
+    display: flex;
+  }
+
+  .ul a {
+    font-size: 14px;
+  }
+
+  .sportLink {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbarHeder {
+    padding: 0 10px;
+  }
+
+  .ul {
+    width: calc(100% - 20px);
+    gap: 5px;
+  }
+
+  .ul a {
+    font-size: 12px;
+  }
+
+  .sportLink {
+    font-size: 12px;
+  }
+}

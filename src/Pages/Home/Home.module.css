@@ -1,0 +1,38 @@
+.HomeDivv {
+  display: flex;
+  flex-direction: column;
+}
+
+.hhh {
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.hhh:hover {
+  color: rgb(176, 199, 46);
+}
+
+@media (max-width: 1024px) {
+  .hhh {
+    margin-top: 80px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hhh {
+    margin-top: 60px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hhh {
+    margin-top: 40px;
+    font-size: 18px;
+  }
+}

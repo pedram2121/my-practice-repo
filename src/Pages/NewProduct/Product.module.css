@@ -1,0 +1,224 @@
+.GGG {
+  margin-top: 100px;
+}
+
+.MMM {
+  margin-top: 120px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 16px;
+  margin-top: 100px;
+  width: 100%; /* اضافه کردن این مورد */
+  justify-items: center; /* مرکز کردن آیتم‌ها */
+  align-items: start; /* شروع چینش از بالا */
+}
+
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px; /* فاصله بین آیتم‌ها */
+  margin-top: 100px; /* مقدار اولیه کمتر برای margin */
+}
+
+@media (max-width: 1536px) {
+  .gridContainer {
+    margin-top: 420px; /* مقدار تنظیم شده */
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .gridContainer {
+    margin-top: 900px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .gridContainer {
+    margin-top: 200px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .gridContainer {
+    margin-top: 300px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gridContainer {
+    grid-template-columns: repeat(1, 1fr); /* یک ستون برای موبایل */
+    gap: 10px;
+  }
+}
+
+
+
+
+
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: auto; /* حذف ارتفاع ثابت */
+}
+
+.productImage {
+  width: 100%; /* مقیاس خودکار با سایز کارت */
+  max-width: 150px;
+  height: auto; /* حذف ارتفاع ثابت */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+.productName {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.productPrice {
+  font-size: 14px;
+  color: #555;
+  margin: 8px 0;
+}
+
+.categories {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.category {
+  background-color: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #333;
+}
+
+.sale {
+  color: red;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+@media (max-width: 1024px) {
+  .productCard {
+
+    padding: 12px;
+  }
+
+  .productImage {
+    width: 120px; /* تصویر در حالت 1024px: 120px */
+    height: 120px; /* تصویر در حالت 1024px: 120px */
+  }
+
+  .productName {
+    font-size: 14px;
+  }
+
+  .productPrice {
+    font-size: 12px;
+  }
+
+  .categories {
+    gap: 6px;
+  }
+
+  .category {
+    font-size: 10px;
+  }
+
+  .sale {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .productCard {
+ 
+    padding: 10px;
+  }
+
+  .productImage {
+    width: 100px; /* تصویر در حالت 768px: 100px */
+    height: 100px; /* تصویر در حالت 768px: 100px */
+  }
+
+  .productName {
+    font-size: 12px;
+  }
+
+  .productPrice {
+    font-size: 10px;
+  }
+
+  .categories {
+    gap: 4px;
+  }
+
+  .category {
+    font-size: 8px;
+  }
+
+  .sale {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .productCard {
+
+    padding: 8px;
+  }
+
+  .productImage {
+    width: 80px; /* تصویر در حالت 480px: 80px */
+    height: 80px; /* تصویر در حالت 480px: 80px */
+  }
+
+  .productName {
+    font-size: 10px;
+  }
+
+  .productPrice {
+    font-size: 8px;
+  }
+
+  .categories {
+    gap: 2px;
+  }
+
+  .category {
+    font-size: 6px;
+  }
+
+  .sale {
+    font-size: 8px;
+  }
+}
