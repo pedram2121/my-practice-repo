@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "../Nav/Navbar.module.css";
 import { Link } from "react-router-dom";
 import Container from "../Container/Container";
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
     <Container>
       <div className={style.navbarHeder}>
-        <ul className={style.ul}>
-
+        <div className={style.hamburger} onClick={toggleMenu}>
+          ☰
+        </div>
+        <ul className={`${style.ul} ${menuOpen ? style.showMenu : ""}`}>
           <li>
             <Link to="/men">MEN'S</Link>
           </li>

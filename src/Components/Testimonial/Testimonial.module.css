@@ -1,30 +1,35 @@
 .container {
-  margin-top: 400px;
+  margin: 100px auto;
   max-width: 1350px;
+  padding: 0 1rem;
 }
 
 .title {
   font-weight: 500;
   font-size: 2xl;
+  text-align: center; 
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
   gap: 1rem;
+  justify-content: center;
 }
 
 .card {
   border: 1px solid #d1d5db;
   border-radius: 1rem;
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 1.5rem;
-  max-width: 300px;
 }
 
 .avatar {
   border-radius: 50%;
+  margin-top: 30px;
 }
 
 .inlineBlock {
@@ -35,45 +40,54 @@
   color: #585e69;
   font-weight: 700;
   font-size: 20px;
-  margin-top: -35px;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .role {
   color: #6b7280;
-  margin-top: -55px;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .quoteIcon {
   display: inline-block;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem;
   border-radius: 25px;
+  margin-top: 60px;
 }
 
 .description {
   max-width: 300px;
   color: #6b7280;
+  text-align: center;
+  margin-top: 60px;
 }
 
 .bannerContainer {
   background-color: #c4c4c4;
   background-image: url('../../../public/cta-bannerr.jpg.jpg');
   background-size: cover;
+  background-position: center;
   height: 700px;
-  width: 950px;
+  width: 100%;
+  max-width: 950px;
   border-radius: 16px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .cardLarge {
   background-color: rgba(255, 255, 255, 0.8);
-  min-width: 400px;
+  width: 100%;
+  max-width: 400px;
   border-radius: 12px;
   padding: 16px 32px;
-  display: grid;
-  grid-template-rows: auto;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 12px;
 }
 
@@ -109,27 +123,18 @@
 }
 
 @media (max-width: 1024px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
   .container {
     margin-top: 200px;
     max-width: 100%;
   }
 
   .bannerContainer {
-    width: 100%;
     height: 500px;
   }
 
   .cardLarge {
-    min-width: 300px;
+    max-width: 350px;
     padding: 16px 24px;
-  }
-
-  .discountButton {
-    font-size: medium;
   }
 
   .collectionTitle {
@@ -144,7 +149,6 @@
 @media (max-width: 768px) {
   .container {
     margin-top: 150px;
-    max-width: 100%;
   }
 
   .bannerContainer {
@@ -152,7 +156,7 @@
   }
 
   .cardLarge {
-    min-width: 250px;
+    max-width: 300px;
     padding: 14px 20px;
   }
 
@@ -172,7 +176,6 @@
 @media (max-width: 480px) {
   .container {
     margin-top: 100px;
-    max-width: 100%;
   }
 
   .bannerContainer {
@@ -180,7 +183,7 @@
   }
 
   .cardLarge {
-    min-width: 200px;
+    max-width: 250px;
     padding: 12px 16px;
   }
 

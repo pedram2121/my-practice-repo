@@ -4,8 +4,12 @@
 }
 
 .hhh {
-  margin-top: 100px;
+
+  display: flex;
+  justify-content: center;
   text-align: center;
+  align-items: center;
+  margin-top: 150px;
 }
 
 .hhh:hover {
