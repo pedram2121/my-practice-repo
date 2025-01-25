@@ -1,0 +1,3 @@
+[submodule "my-practice-repo"]
+    path = my-practice-repo
+    url = https://github.com/pedram2121/my-practice-repo.git
