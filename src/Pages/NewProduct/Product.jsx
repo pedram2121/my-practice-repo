@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import style from "./Product.module.css";
-import { getProduct } from "../../Components/Services/api";
+import { getProduct } from "../../Services/api";
 import Productcart from "../ProductCart/Productcart";
 
 function Product() {
