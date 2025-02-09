@@ -67,7 +67,7 @@ useEffect(() => {
             that product special, with the goal of persuading customers to make
             a purchase.
           </p>
-          <p className={styles.stock}>20 عدد در انبار</p>
+          <p className={styles.stock}>20 Quantity in stock</p>
 
           <button className={styles.addToCart}>
             <AiOutlineShoppingCart className={styles.icon} /> AddToCart
@@ -75,7 +75,7 @@ useEffect(() => {
 
           <div className={styles.actions}>
             <span>
-              <AiOutlineHeart /> افزودن به لیست علاقه‌مندی‌ها
+              <AiOutlineHeart /> Add to wishlist
             </span>
           </div>
         </div>
