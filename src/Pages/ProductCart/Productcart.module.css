@@ -46,7 +46,9 @@
   overflow: hidden;
   white-space: nowrap;
 }
-
+.productLink{
+  text-decoration: none;
+}
 .price {
   font-size: 22px;
   font-weight: bold;

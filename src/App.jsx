@@ -12,6 +12,7 @@ import Womens from "./Pages/Womens/Womens";
 import Mens from "./Pages/Mens/Mens";
 import "wicg-inert";
 import Footer from "./Components/Footer/Footer";
+import ProductDetail from "./Pages/Details/ProductDetail";
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/women" element={<Womens />} />
             <Route path="/men" element={<Mens />} />
+            <Route path="/product/:id" element={<ProductDetail/>} />
           </Routes>
         </Container>
         <Footer />

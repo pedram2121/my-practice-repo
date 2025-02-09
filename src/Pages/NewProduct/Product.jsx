@@ -14,28 +14,24 @@ function Product() {
 
   return (
     <>
-    <div className={style.MMM} >
-   <div className={style.GGG}> 
-      </div>
-      <div className={style.PPP}>
-        <div className={style.gridContainer}>
-          {products.map((item, index) => (
-            <Productcart
-              key={index}
-              img={item.img}
-              name={item.name}
-              category={item.category}
-              price={item.price}
-              rating={item.rating || 0}
-              sale={item.sale}
-            />
-          ))}
+      <div className={style.MMM}>
+        <div className={style.GGG}></div>
+        <div className={style.PPP}>
+          <div className={style.gridContainer}>
+            {products.map((item, index) => (
+              <Productcart
+                key={index}
+                id={item.id}
+                img={item.img}
+                name={item.name}
+                price={item.price}
+                rating={item.rating || 0}
+                sale={item.sale}
+              />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
-
-
-   
     </>
   );
 }
