@@ -13,6 +13,7 @@ import styles from "./ProductDetail.module.css";
 
 
 function ProductDetail() {
+  
   const { id } = useParams(); 
   const [productData, setProductData] = useState(null);
 

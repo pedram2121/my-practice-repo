@@ -10,14 +10,12 @@ function Product() {
     getProduct().then((data) => {
       setProducts(data);
     });
+     getProduct();
   }, []);
 
   return (
-    <>
-      <div className={style.MMM}>
-        <div className={style.GGG}></div>
-        <div className={style.PPP}>
-          <div className={style.gridContainer}>
+    <> 
+      <div className={style.gridContainer}>
             {products.map((item, index) => (
               <Productcart
                 key={index}
@@ -29,8 +27,6 @@ function Product() {
                 sale={item.sale}
               />
             ))}
-          </div>
-        </div>
       </div>
     </>
   );
