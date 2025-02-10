@@ -10,23 +10,23 @@ function Product() {
     getProduct().then((data) => {
       setProducts(data);
     });
-     getProduct();
+    getProduct();
   }, []);
 
   return (
-    <> 
+    <>
       <div className={style.gridContainer}>
-            {products.map((item, index) => (
-              <Productcart
-                key={index}
-                id={item.id}
-                img={item.img}
-                name={item.name}
-                price={item.price}
-                rating={item.rating || 0}
-                sale={item.sale}
-              />
-            ))}
+        {products.map((item, index) => (
+          <Productcart
+            key={index}
+            id={item.id}
+            img={item.img}
+            name={item.name}
+            price={item.price}
+            rating={item.rating || 0}
+            sale={item.sale}
+          />
+        ))}
       </div>
     </>
   );
