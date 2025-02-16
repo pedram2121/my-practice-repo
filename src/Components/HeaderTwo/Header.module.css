@@ -11,8 +11,9 @@
 
 .inputDiv {
   display: flex;
-  border-radius: 0.5rem;
+  border-radius: 0.4rem;
   width: 100%;
+  font-size: 18px;
 }
 
 .inputBox {
@@ -23,8 +24,8 @@
 
 .search {
   position: absolute;
-  margin-right: 200px;
-  margin-top: 1.5px;
+  margin-right: 240px;
+  margin-top: 6px;
   color: black;
   top: 0.75rem;
   right: 0.75rem;

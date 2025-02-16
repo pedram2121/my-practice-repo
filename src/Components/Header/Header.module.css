@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 24px; /* اندازه متن پیش‌فرض */
+  font-size: 22px; 
 }
 
 .heder_top__icon_wrapper {
@@ -44,6 +44,7 @@
 .SelectGap {
   display: flex;
   gap: 5px;
+  font-size: 14px;
 }
 
 

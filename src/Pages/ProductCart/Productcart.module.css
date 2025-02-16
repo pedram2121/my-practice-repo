@@ -49,9 +49,10 @@
   text-decoration: none;
 }
 .price {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   color: #0b8f63;
+
 }
 
 .sale {
@@ -61,8 +62,11 @@
   padding: 6px 6px;
   border-radius: 6px;
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 10px;
   cursor: pointer;
+}
+.sale:hover{
+  background-color: #0b8f63;
 }
 
 .dell {
@@ -76,7 +80,7 @@
   gap: 4px;
   font-size: 20px;
   color: #ff9529;
-  margin-top: 20px;
+  margin-top: -1px;
 }
 
 .star {

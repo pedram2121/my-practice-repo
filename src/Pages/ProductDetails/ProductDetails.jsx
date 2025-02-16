@@ -8,26 +8,25 @@ import {
 } from "react-icons/ai";
 import { MdCompareArrows } from "react-icons/md";
 import styles from "./ProductDetail.module.css";
+import { useShopingContext } from "../../Components/ShopingCartContex/Shopingcontext";
 
 
+function ProductDetails() {
 
-
-function ProductDetail() {
+  const { handelIncrease, ProductQty } = useShopingContext();
   
-  const { id } = useParams(); 
+
+  const { id } = useParams();
   const [productData, setProductData] = useState(null);
 
-  
-useEffect(() => {
-  const fetchData = async () => {
-    const res = await fetch(`http://localhost:8001/products/${id}`);
-    const data = await res.json();
-    setProductData(data);
-  };
-  fetchData();
-}, [id]);
-
-
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch(`http://localhost:8001/products/${id}`);
+      const data = await res.json();
+      setProductData(data);
+    };
+    fetchData();
+  }, [id]);
 
   return (
     <div className={styles.container}>
@@ -70,9 +69,20 @@ useEffect(() => {
           </p>
           <p className={styles.stock}>20 Quantity in stock</p>
 
-          <button className={styles.addToCart}>
-            <AiOutlineShoppingCart className={styles.icon} /> AddToCart
-          </button>
+          <div className={styles.fleex}>
+            <div>
+              <button
+                onClick={() => handelIncrease(id)}
+                className={styles.addToCart}
+              >
+                +
+              </button>
+            </div>
+            <span>{ProductQty(id)}</span>
+            <div>
+              <button className={styles.addToCart1}>-</button>
+            </div>
+          </div>
 
           <div className={styles.actions}>
             <span>
@@ -85,4 +95,4 @@ useEffect(() => {
   );
 }
 
-export default ProductDetail;
+export default ProductDetails;
