@@ -70,7 +70,7 @@
 .addToCart {
   background-color: #3b85e6;
   color: white;
-  padding: 10px 15px;
+ padding: 12px 25px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -82,14 +82,14 @@
 }
 
 .addToCart:hover {
-  background-color: #dfdad8;
+background-color: #474747;
 }
 
 
 .addToCart1 {
   background-color: #f35d06;
   color: white;
-  padding: 10px 15px;
+  padding: 12px 25px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -100,8 +100,28 @@
   margin-top: 15px;
 }
 
+
+.RemoveToCart{
+background-color: rgb(255, 251, 0);
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+}
+.RemoveToCart:hover{
+   background-color: #474747;
+   color: #f5f5f5;
+}
+
 .addToCart1:hover {
-  background-color: #dfdad8;
+  background-color: #474747;
+
 }
 
 

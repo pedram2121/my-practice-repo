@@ -4,8 +4,12 @@ import { BsSearch } from "react-icons/bs";
 import { BiUser } from "react-icons/bi";
 import { FiHeart } from "react-icons/fi";
 import { HiOutlineShoppingBag } from "react-icons/hi";
+import { useShopingContext } from "../ShopingCartContex/Shopingcontext";
 
 function HeaderTwo() {
+
+    const { ProductAllQty } = useShopingContext();
+
   return (
     <div className={style.HeaderTwoo}>
       <div className={style.logo}> Logo </div>
@@ -23,12 +27,15 @@ function HeaderTwo() {
         <BiUser />
         <div className={style.iconwrapper}>
           <FiHeart />
+
           <div className={style.badge}>0</div>
         </div>
 
-        <div className={style.iconwrapper}>
-          <HiOutlineShoppingBag />
-          <div className={style.badge}>0</div>
+        <div>
+          <div className={style.iconwrapper}>
+            <HiOutlineShoppingBag />
+            <div className={style.ab}>{ProductAllQty}</div>
+          </div>
         </div>
       </div>
     </div>

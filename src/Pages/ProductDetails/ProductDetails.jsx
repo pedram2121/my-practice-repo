@@ -10,11 +10,9 @@ import { MdCompareArrows } from "react-icons/md";
 import styles from "./ProductDetail.module.css";
 import { useShopingContext } from "../../Components/ShopingCartContex/Shopingcontext";
 
-
 function ProductDetails() {
-
-  const { handelIncrease, ProductQty } = useShopingContext();
-  
+  const { handelIncrease, ProductQty, handleDecrease, handelDeleteProduct } =
+    useShopingContext();
 
   const { id } = useParams();
   const [productData, setProductData] = useState(null);
@@ -80,10 +78,22 @@ function ProductDetails() {
             </div>
             <span>{ProductQty(id)}</span>
             <div>
-              <button className={styles.addToCart1}>-</button>
+              <button
+                onClick={() => handleDecrease(id)}
+                className={styles.addToCart1}
+              >
+                -
+              </button>
             </div>
           </div>
-
+          <div>
+            <button
+              onClick={() => handelDeleteProduct(id)}
+              className={styles.RemoveToCart}
+            >
+              Remove From Cart
+            </button>
+          </div>
           <div className={styles.actions}>
             <span>
               <AiOutlineHeart /> Add to wishlist

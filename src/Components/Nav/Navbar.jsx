@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import style from "../Nav/Navbar.module.css";
 import { Link } from "react-router-dom";
 import Container from "../Container/Container";
+import { useShopingContext } from "../ShopingCartContex/Shopingcontext";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -33,11 +36,13 @@ function Navbar() {
             <Link to="/">Home</Link>
           </li>
         </ul>
-        <div>
+
+        <div className={style.re}>
           <li className={style.sportLinkWrapper}>
             <Link to="/Sport" className={style.sportLink}>
               Cart
             </Link>
+           
           </li>
         </div>
       </div>

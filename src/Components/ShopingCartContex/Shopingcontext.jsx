@@ -6,17 +6,16 @@ export const useShopingContext = () => {
   return useContext(ShopingContextCreate);
 };
 
-function Shopingcontext({children}) {
-
+function Shopingcontext({ children }) {
   const [cartItem, setCartItem] = useState([]);
 
   const handelIncrease = (id) => {
-    setCartItem((currentItem) => {
-      let NotProduct = currentItem.find((item) => item.id == id) == null;
+    setCartItem((currentItems) => {
+      let NotProduct = currentItems.find((item) => item.id == id) == null;
       if (NotProduct) {
-        return [...currentItem, { id , qty: 1 }];
+        return [...currentItems, { id, qty: 1 }];
       } else {
-       return currentItem.map((item) => {
+        return currentItems.map((item) => {
           if (item.id == id) {
             return { ...item, qty: item.qty + 1 };
           } else {
@@ -27,13 +26,48 @@ function Shopingcontext({children}) {
     });
   };
 
-  const ProductQty = (id) =>{
-    return cartItem.find ((item)=> item.id == id)?.qty
+  const handleDecrease = (id) => {
+    setCartItem((currentItems) => {
+      let LastProduct = currentItems.find((item) => item.id == id)?.qty == 1;
+      if (LastProduct){
+        return currentItems.filter ((item)=> item.id != id)
+      }
+      else{
+        return currentItems.map ((item)=>{
+          if (item.id == id){
+            return {...item , qty:item.qty-1}
+          }
+          return item
+        })
+      }
+    });
+  };
+
+  const handelDeleteProduct = (id) =>{
+    setCartItem ((currentItems)=>{
+      return currentItems.filter ((item)=> item.id != id)
+    })
   }
+
+  const ProductQty = (id) => {
+    return cartItem.find((item) => item.id == id)?.qty || 0;
+  };
+
+  const ProductAllQty = cartItem.reduce((totalqty, index) => {
+    return totalqty + index.qty;
+  }, 0);
 
   return (
     <>
-      <ShopingContextCreate.Provider value={{ handelIncrease, ProductQty }}>
+      <ShopingContextCreate.Provider
+        value={{
+          handelIncrease,
+          ProductQty,
+          ProductAllQty,
+          handleDecrease,
+          handelDeleteProduct,
+        }}
+      >
         {children}
       </ShopingContextCreate.Provider>
     </>
