@@ -2,14 +2,11 @@
 import axios from "axios";
 
 
-const baseurll = "http://localhost:8001/";
-const basee = axios.create({
-  baseURL:baseurll
-})
+const basecreate = "http://localhost:8001/";
+const base = axios.create({
+  baseURL: basecreate
+});
 
-
- export async function getProduct (){
-
-return (await (basee.get("products"))).data
-
+export const getProduct = async()=>{
+return (await base.get("/products/")).data
 }

@@ -4,17 +4,18 @@ import { getProduct } from "../../Services/api";
 
 
 
-function CartItemProduct({id , qty}) {
+function CartItemProduct({id}) {
 
   const { handelIncrease, ProductQty, handleDecrease, handelDeleteProduct } = useShopingContext();
     
   const [product, setProduct] = useState(null);
 
-  useEffect(() => {
-    getProduct().then((products) => {
-      setProduct(products.find((item) => item.id === id));
-    });
-  }, [id]);
+  useEffect(() => {   
+    getProduct().then((Result)=>{
+      setProduct(Result.find (item=>item.id == id))
+    })  
+  }, [id])
+  
 
   
   if (!product) return <p>در حال بارگذاری...</p>;
@@ -36,7 +37,7 @@ function CartItemProduct({id , qty}) {
           </h2>
         </div>
 
-        <div className="flex col-span-2 w-96 items-center gap-4">
+        <div className="flex col-span-2  items-center gap-4">
           <button
             onClick={() => handleDecrease(id)}
             className="bg-orange-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-orange-700 transition-all"
@@ -52,24 +53,35 @@ function CartItemProduct({id , qty}) {
           >
             +
           </button>
-
         </div>
 
-        <div className="col-span-2 text-right mr-20">
-          <span className="text-xl font-semibold text-green-600">
-            ${product?.price}.00
-          </span>
+        <div className="flex justify-center items-center text-center col-span-2 text-right mr-20">
+        <p className="mr-2 text-2xl">Price: </p>
+          <span className="text-xl font-bold text-green-600"> ${product?.price}.00 </span>
+          
+         
         </div>
       </div>
 
-      <div className="mt-6 flex justify-end">
-        <button
-          onClick={() => handelDeleteProduct(id)}
-          className="bg-yellow-500 text-black px-6 py-2 rounded-lg
-             cursor-pointer hover:bg-yellow-600 text-sm flex items-center gap-2 transition-all"
-        >
-          RemoveFromCart
-        </button>
+      <div className="flex justify-between items-center mx-auto">
+        <div className="mt-6 justify-end">
+          <button
+            onClick={() => handelDeleteProduct(id)}
+            className="bg-yellow-500 text-black px-6 py-2 rounded-lg
+             cursor-pointer hover:bg-red-500 hover:text-white text-sm flex items-center gap-2 transition-all"
+          >
+            RemoveFromCart
+          </button>
+        </div>
+
+        <div className="mt-6 justify-end">
+          <button
+            className="bg-gray-900 text-white px-16 py-2 rounded-lg
+             cursor-pointer hover:bg-green-500 text-sm flex items-center gap-2 transition-all"
+          >
+            CheckOut
+          </button>
+        </div>
       </div>
     </div>
   );

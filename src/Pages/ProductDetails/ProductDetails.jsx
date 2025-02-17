@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import {
   AiFillStar,
   AiOutlineHeart,
@@ -11,7 +11,6 @@ import styles from "./ProductDetail.module.css";
 import { useShopingContext } from "../../Components/ShopingCartContex/Shopingcontext";
 
 function ProductDetails() {
-  
   const { handelIncrease, ProductQty, handleDecrease, handelDeleteProduct } =
     useShopingContext();
 
@@ -88,14 +87,21 @@ function ProductDetails() {
             </div>
           </div>
 
-          
           <div>
             <button
               onClick={() => handelDeleteProduct(id)}
-              className={styles.RemoveToCart} >
+              className={styles.RemoveToCart}
+            >
               Remove From Cart
             </button>
           </div>
+
+          <Link to="/cart/">
+            <div>
+              <button className={styles.ToCart}>Cart</button>
+            </div>
+          </Link>
+
           <div className={styles.actions}>
             <span>
               <AiOutlineHeart /> Add to wishlist
