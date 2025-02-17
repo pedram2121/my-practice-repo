@@ -1,15 +1,23 @@
 import { useEffect, useState } from "react";
 import { useShopingContext } from "../../Components/ShopingCartContex/Shopingcontext";
 import { getProduct } from "../../Services/api";
+import axios from "axios";
+import { MdShoppingCart } from "react-icons/md";
 
 
 
 function CartItemProduct({id}) {
 
-  const { handelIncrease, ProductQty, handleDecrease, handelDeleteProduct } = useShopingContext();
-    
-  const [product, setProduct] = useState(null);
+  const {
+    handelIncrease,
+    ProductQty,
+    handleDecrease,
+    handelDeleteProduct,
+    cartItem,
+  } = useShopingContext();
 
+
+  const [product, setProduct] = useState(null);
   useEffect(() => {   
     getProduct().then((Result)=>{
       setProduct(Result.find (item=>item.id == id))
@@ -30,13 +38,11 @@ function CartItemProduct({id}) {
             alt={product?.name}
           />
         </div>
-
         <div className="col-span-5">
           <h2 className="text-2xl font-semibold text-gray-800 tracking-wide">
             {product?.name}
           </h2>
         </div>
-
         <div className="flex col-span-2  items-center gap-4">
           <button
             onClick={() => handleDecrease(id)}
@@ -54,14 +60,17 @@ function CartItemProduct({id}) {
             +
           </button>
         </div>
-
-        <div className="flex justify-center items-center text-center col-span-2 text-right mr-20">
-        <p className="mr-2 text-2xl">Price: </p>
-          <span className="text-xl font-bold text-green-600"> ${product?.price}.00 </span>
-          
-         
+        <div className="flex justify-center items-center col-span-2 text-right mr-10">
+          <p className="mr-2 text-[16px] whitespace-nowrap">
+            Price per piece:{" "}
+          </p>
+          <span className="text-xl font-bold text-green-600">
+            ${product?.price}.00
+          </span>
         </div>
       </div>
+
+      
 
       <div className="flex justify-between items-center mx-auto">
         <div className="mt-6 justify-end">

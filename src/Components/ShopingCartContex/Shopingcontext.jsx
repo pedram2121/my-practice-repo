@@ -7,7 +7,6 @@ export const useShopingContext = () => {
 };
 
 function Shopingcontext({ children }) {
-  
   const [cartItem, setCartItem] = useState([]);
 
   const handelIncrease = (id) => {
@@ -30,34 +29,33 @@ function Shopingcontext({ children }) {
   const handleDecrease = (id) => {
     setCartItem((currentItems) => {
       let LastProduct = currentItems.find((item) => item.id == id)?.qty == 1;
-      if (LastProduct){
-        return currentItems.filter ((item)=> item.id != id)
-      }
-      else{
-        return currentItems.map ((item)=>{
-          if (item.id == id){
-            return {...item , qty:item.qty-1}
+      if (LastProduct) {
+        return currentItems.filter((item) => item.id != id);
+      } else {
+        return currentItems.map((item) => {
+          if (item.id == id) {
+            return { ...item, qty: item.qty - 1 };
+          } else {
+            return item;
           }
-          return item
-        })
+        });
       }
     });
   };
 
-  const handelDeleteProduct = (id) =>{
-    setCartItem ((currentItems)=>{
-      return currentItems.filter ((item)=> item.id != id)
-    })
-  }
+  const handelDeleteProduct = (id) => {
+    setCartItem((currentItems) => {
+      return currentItems.filter((item) => item.id != id);
+    });
+  };
 
   const ProductQty = (id) => {
     return cartItem.find((item) => item.id == id)?.qty || 0;
   };
 
-  const ProductAllQty = cartItem.reduce((totalqty, index) => {
-    return totalqty + index.qty;
+  const ProductAllQty = cartItem.reduce((total, index) => {
+    return total + index.qty;
   }, 0);
-
   return (
     <>
       <ShopingContextCreate.Provider
