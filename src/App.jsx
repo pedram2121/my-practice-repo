@@ -14,6 +14,9 @@ import "wicg-inert";
 import Footer from "./Components/Footer/Footer";
 import ProductDetails from "./Pages/ProductDetails/ProductDetails";
 import Shopingcontext from "./Components/ShopingCartContex/Shopingcontext";
+import CartProduct from "./Pages/Cart/CartProduct";
+
+
 
 function App() {
   return (
@@ -30,6 +33,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/women" element={<Womens />} />
               <Route path="/men" element={<Mens />} />
+              <Route path="/cart" element={<CartProduct />} />
               <Route path="/product/:id" element={<ProductDetails />} />
             </Routes>
           </Container>

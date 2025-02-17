@@ -86,11 +86,12 @@ function ProductDetails() {
               </button>
             </div>
           </div>
+
+          
           <div>
             <button
               onClick={() => handelDeleteProduct(id)}
-              className={styles.RemoveToCart}
-            >
+              className={styles.RemoveToCart} >
               Remove From Cart
             </button>
           </div>

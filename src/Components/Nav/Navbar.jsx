@@ -39,7 +39,7 @@ function Navbar() {
 
         <div className={style.re}>
           <li className={style.sportLinkWrapper}>
-            <Link to="/Sport" className={style.sportLink}>
+            <Link to="/cart" className={style.sportLink}>
               Cart
             </Link>
            

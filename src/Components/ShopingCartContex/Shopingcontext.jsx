@@ -7,6 +7,7 @@ export const useShopingContext = () => {
 };
 
 function Shopingcontext({ children }) {
+  
   const [cartItem, setCartItem] = useState([]);
 
   const handelIncrease = (id) => {
@@ -66,6 +67,7 @@ function Shopingcontext({ children }) {
           ProductAllQty,
           handleDecrease,
           handelDeleteProduct,
+          cartItem,
         }}
       >
         {children}

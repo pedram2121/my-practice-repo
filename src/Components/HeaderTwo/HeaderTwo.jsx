@@ -5,6 +5,7 @@ import { BiUser } from "react-icons/bi";
 import { FiHeart } from "react-icons/fi";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { useShopingContext } from "../ShopingCartContex/Shopingcontext";
+import { Link } from "react-router-dom";
 
 function HeaderTwo() {
 
@@ -12,7 +13,11 @@ function HeaderTwo() {
 
   return (
     <div className={style.HeaderTwoo}>
-      <div className={style.logo}> Logo </div>
+
+      <Link to={"/"}>
+       <div className={style.logo}> Logo </div>
+      </Link>
+     
 
       <div className={style.inputDiv}>
         <input
@@ -32,11 +37,15 @@ function HeaderTwo() {
         </div>
 
         <div>
+          <Link to={"/cart/"}>
           <div className={style.iconwrapper}>
             <HiOutlineShoppingBag />
             <div className={style.ab}>{ProductAllQty}</div>
           </div>
+          </Link>  
         </div>
+
+
       </div>
     </div>
   );
