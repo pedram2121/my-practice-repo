@@ -11,6 +11,7 @@ import styles from "./ProductDetail.module.css";
 import { useShopingContext } from "../../Components/ShopingCartContex/Shopingcontext";
 
 function ProductDetails() {
+  
   const { handelIncrease, ProductQty, handleDecrease, handelDeleteProduct } =
     useShopingContext();
 
