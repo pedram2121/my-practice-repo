@@ -8,10 +8,10 @@ import {
 } from "react-icons/ai";
 import { MdCompareArrows } from "react-icons/md";
 import styles from "./ProductDetail.module.css";
-import { useShopingContext } from "../../Components/ShopingCartContex/Shopingcontext";
+import { useShopingContext } from "../../Components/ShopingCartContext/Shopingcontext";
 
 function ProductDetails() {
-  const { handelIncrease, ProductQty, handleDecrease, handelDeleteProduct } =
+  const { handelIncrease, productQty, handleDecrease, handelDeleteProduct } =
     useShopingContext();
 
   const { id } = useParams();
@@ -76,7 +76,7 @@ function ProductDetails() {
                 +
               </button>
             </div>
-            <span>{ProductQty(id)}</span>
+            <span>{productQty(id)}</span>
             <div>
               <button
                 onClick={() => handleDecrease(id)}

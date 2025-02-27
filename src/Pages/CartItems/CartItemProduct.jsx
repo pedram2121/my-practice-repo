@@ -1,31 +1,25 @@
 import { useEffect, useState } from "react";
-import { useShopingContext } from "../../Components/ShopingCartContex/Shopingcontext";
+import { useShopingContext } from "../../Components/ShopingCartContext/Shopingcontext";
 import { getProduct } from "../../Services/api";
 import axios from "axios";
 import { MdShoppingCart } from "react-icons/md";
 
-
-
-function CartItemProduct({id}) {
-
+function CartItemProduct({ id }) {
   const {
     handelIncrease,
-    ProductQty,
+    productQty,
     handleDecrease,
     handelDeleteProduct,
     cartItem,
   } = useShopingContext();
 
-
   const [product, setProduct] = useState(null);
-  useEffect(() => {   
-    getProduct().then((Result)=>{
-      setProduct(Result.find (item=>item.id == id))
-    })  
-  }, [id])
-  
+  useEffect(() => {
+    getProduct().then((result) => {
+      setProduct(result.find((item) => item.id == id));
+    });
+  }, [id]);
 
-  
   if (!product) return <p>در حال بارگذاری...</p>;
 
   return (
@@ -51,7 +45,7 @@ function CartItemProduct({id}) {
             -
           </button>
 
-          <span className="text-lg font-semibold">{ProductQty(id)}</span>
+          <span className="text-lg font-semibold">{productQty(id)}</span>
 
           <button
             onClick={() => handelIncrease(id)}
@@ -69,8 +63,6 @@ function CartItemProduct({id}) {
           </span>
         </div>
       </div>
-
-      
 
       <div className="flex justify-between items-center mx-auto">
         <div className="mt-6 justify-end">

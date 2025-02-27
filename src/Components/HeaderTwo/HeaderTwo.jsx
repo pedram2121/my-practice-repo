@@ -4,20 +4,17 @@ import { BsSearch } from "react-icons/bs";
 import { BiUser } from "react-icons/bi";
 import { FiHeart } from "react-icons/fi";
 import { HiOutlineShoppingBag } from "react-icons/hi";
-import { useShopingContext } from "../ShopingCartContex/Shopingcontext";
+import { useShopingContext } from "../ShopingCartContext/Shopingcontext";
 import { Link } from "react-router-dom";
 
 function HeaderTwo() {
-
-    const { ProductAllQty } = useShopingContext();
+  const { productTotalQty } = useShopingContext();
 
   return (
     <div className={style.HeaderTwoo}>
-
       <Link to={"/"}>
-       <div className={style.logo}> Logo </div>
+        <div className={style.logo}> Logo </div>
       </Link>
-     
 
       <div className={style.inputDiv}>
         <input
@@ -38,14 +35,12 @@ function HeaderTwo() {
 
         <div>
           <Link to={"/cart/"}>
-          <div className={style.iconwrapper}>
-            <HiOutlineShoppingBag />
-            <div className={style.ab}>{ProductAllQty}</div>
-          </div>
-          </Link>  
+            <div className={style.iconwrapper}>
+              <HiOutlineShoppingBag />
+              <div className={style.ab}>{productTotalQty}</div>
+            </div>
+          </Link>
         </div>
-
-
       </div>
     </div>
   );

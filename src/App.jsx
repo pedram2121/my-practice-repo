@@ -13,7 +13,7 @@ import Mens from "./Pages/Mens/Mens";
 import "wicg-inert";
 import Footer from "./Components/Footer/Footer";
 import ProductDetails from "./Pages/ProductDetails/ProductDetails";
-import Shopingcontext from "./Components/ShopingCartContex/Shopingcontext";
+import Shopingcontext from "./Components/ShopingCartContext/Shopingcontext";
 import CartProduct from "./Pages/Cart/CartProduct";
 
 

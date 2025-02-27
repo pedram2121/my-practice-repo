@@ -1,12 +1,13 @@
-
 import axios from "axios";
 
-
-const basecreate = "http://localhost:8001/";
+const client = "http://localhost:8001/";
 const base = axios.create({
-  baseURL: basecreate
+  baseURL: client,
 });
 
-export const getProduct = async()=>{
-return (await base.get("/products/")).data
-}
+export const getProduct = async () => {
+  return (await base.get("/products/")).data;
+};
+
+export const getDiscount = (code) =>
+  base.get(`/discount?code=${code}`).then((res) => res.data);

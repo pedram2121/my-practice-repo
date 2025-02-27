@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import style from "../Nav/Navbar.module.css";
 import { Link } from "react-router-dom";
 import Container from "../Container/Container";
-import { useShopingContext } from "../ShopingCartContex/Shopingcontext";
+import { useShopingContext } from "../ShopingCartContext/Shopingcontext";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);

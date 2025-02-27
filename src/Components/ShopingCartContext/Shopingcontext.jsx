@@ -1,18 +1,19 @@
 import React, { createContext, useContext, useState } from "react";
+import { useLocalStorage } from "../../hooks/useLocalStorag";
 
-export const ShopingContextCreate = createContext({});
+export const shopingContextCreate = createContext({});
 
 export const useShopingContext = () => {
-  return useContext(ShopingContextCreate);
+  return useContext(shopingContextCreate);
 };
 
 function Shopingcontext({ children }) {
-  const [cartItem, setCartItem] = useState([]);
+  const [cartItem, setCartItem] = useLocalStorage("cart",[]);
 
   const handelIncrease = (id) => {
     setCartItem((currentItems) => {
-      let NotProduct = currentItems.find((item) => item.id == id) == null;
-      if (NotProduct) {
+      let notProduct = currentItems.find((item) => item.id == id) == null;
+      if (notProduct) {
         return [...currentItems, { id, qty: 1 }];
       } else {
         return currentItems.map((item) => {
@@ -28,8 +29,8 @@ function Shopingcontext({ children }) {
 
   const handleDecrease = (id) => {
     setCartItem((currentItems) => {
-      let LastProduct = currentItems.find((item) => item.id == id)?.qty == 1;
-      if (LastProduct) {
+      let lastProduct = currentItems.find((item) => item.id == id)?.qty == 1;
+      if (lastProduct) {
         return currentItems.filter((item) => item.id != id);
       } else {
         return currentItems.map((item) => {
@@ -49,27 +50,27 @@ function Shopingcontext({ children }) {
     });
   };
 
-  const ProductQty = (id) => {
+  const productQty = (id) => {
     return cartItem.find((item) => item.id == id)?.qty || 0;
   };
 
-  const ProductAllQty = cartItem.reduce((total, index) => {
+  const productTotalQty = cartItem.reduce((total, index) => {
     return total + index.qty;
   }, 0);
   return (
     <>
-      <ShopingContextCreate.Provider
+      <shopingContextCreate.Provider
         value={{
           handelIncrease,
-          ProductQty,
-          ProductAllQty,
+          productQty,
+          productTotalQty,
           handleDecrease,
           handelDeleteProduct,
           cartItem,
         }}
       >
         {children}
-      </ShopingContextCreate.Provider>
+      </shopingContextCreate.Provider>
     </>
   );
 }
