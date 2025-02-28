@@ -13,17 +13,15 @@ import Mens from "./Pages/Mens/Mens";
 import "wicg-inert";
 import Footer from "./Components/Footer/Footer";
 import ProductDetails from "./Pages/ProductDetails/ProductDetails";
-import Shopingcontext from "./Components/ShopingCartContext/Shopingcontext";
+import Shopingcontext from "./ShopingCartContext/Shopingcontext";
 import CartProduct from "./Pages/Cart/CartProduct";
-
-
 
 function App() {
   return (
     <>
       <Shopingcontext>
         <BrowserRouter>
-          <Container>
+        
             <Header />
             <HeaderTwo />
             <Navbar />
@@ -36,7 +34,7 @@ function App() {
               <Route path="/cart" element={<CartProduct />} />
               <Route path="/product/:id" element={<ProductDetails />} />
             </Routes>
-          </Container>
+        
           <Footer />
         </BrowserRouter>
       </Shopingcontext>

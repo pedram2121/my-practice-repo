@@ -9,5 +9,12 @@ export const getProduct = async () => {
   return (await base.get("/products/")).data;
 };
 
-export const getDiscount = (code) =>
-  base.get(`/discount?code=${code}`).then((res) => res.data);
+export const detailsProduct = async (id) => {
+  const data =  await base.get(`/products/${id}`)
+  return data;
+};
+
+
+export const getDiscount = async (code) => {
+  return base(`/discount?code=${code}`).then((res) => res.data);
+};

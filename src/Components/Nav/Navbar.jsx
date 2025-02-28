@@ -2,17 +2,14 @@ import React, { useState } from "react";
 import style from "../Nav/Navbar.module.css";
 import { Link } from "react-router-dom";
 import Container from "../Container/Container";
-import { useShopingContext } from "../ShopingCartContext/Shopingcontext";
+import { useShopingContext } from "../../ShopingCartContext/Shopingcontext";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-
-
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-
   return (
     <Container>
       <div className={style.navbarHeder}>
@@ -23,15 +20,19 @@ function Navbar() {
           <li>
             <Link to="/men">MEN'S</Link>
           </li>
+
           <li>
             <Link to="/women">WOMEN'S</Link>
           </li>
+
           <li>
             <Link to="/contact">ContactUs</Link>
           </li>
+
           <li>
             <Link to="/store">Store</Link>
           </li>
+
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -42,7 +43,6 @@ function Navbar() {
             <Link to="/cart" className={style.sportLink}>
               Cart
             </Link>
-           
           </li>
         </div>
       </div>

@@ -42,9 +42,6 @@ function Testimonial() {
               </p>
             </div>
           </div>
-
-
-
         </div>
       </div>
     </Container>

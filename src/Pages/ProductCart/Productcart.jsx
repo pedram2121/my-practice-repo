@@ -2,6 +2,7 @@ import React from "react";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import styles from "./Productcart.module.css";
 import { Link } from "react-router-dom";
+import Container from "../../Components/Container/Container";
 
 const generatingRate = (rating) => {
   switch (rating) {
@@ -63,6 +64,7 @@ const generatingRate = (rating) => {
 const Productcart = ({ img, name, price, rating, sale , id }) => {
   return (
     <>
+    <Container>
       <Link to={`/product/${id}`} className={styles.productLink}>
         <div className={styles.productCard}>
           <div>
@@ -77,6 +79,8 @@ const Productcart = ({ img, name, price, rating, sale , id }) => {
           </div>
         </div>
       </Link>
+    </Container>
+      
     </>
   );
 };

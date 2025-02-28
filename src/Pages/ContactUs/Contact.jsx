@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import Container from "../../Components/Container/Container";
 
 function Contact() {
   return (
     <>
-      <div>hi Contact </div>
+      <Container>
+        <div>hi Contact </div>
+      </Container>
     </>
   );
 }
 
-export default Contact
+export default Contact;

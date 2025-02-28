@@ -1,8 +1,10 @@
+
 .productCard {
-  padding: 25px;
+  padding: 10px;
   border: 1px solid #e5e7eb;
   border-radius: 12px;
-  height: 460px;
+  height: 465px;
+  width: 220px;
   background-color: #ffffff;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
